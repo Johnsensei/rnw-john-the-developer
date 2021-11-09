@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "rnw-john-the-developer",
+    "slug": "rnw-john-the-developer",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "rnw-john-the-developer"
+}
