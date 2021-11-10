@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { RFPercentage } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
+
+import JohnsenseiAnimated from './img/johnsensei-animated.gif'
 
 export default function App() {
 
@@ -20,7 +23,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>Open up App.js to start working on your app!</Text>
+      <View style={styles.headerStyle}>
+        <Text style={styles.headerText}>John the Developer</Text>
+        <Image
+          source={JohnsenseiAnimated}
+          style={styles.johnsenseiAnimated}
+        />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -30,14 +39,25 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: 'teal',
     
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'top',
   },
   headerText: {
     color: '#fff',
-    fontSize: 40,
+    margin: 40,
+    //TODO Align top.
+    fontSize: RFPercentage(4),
     fontFamily: 'Retro-Italics'
+  },
+  johnsenseiAnimated: {
+    width: '48px',
+    height: '48px'
+  },
+  headerStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
