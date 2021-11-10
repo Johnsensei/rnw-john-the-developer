@@ -6,6 +6,8 @@ import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import JohnsenseiAnimated from './img/johnsensei-animated.gif';
+import HiraganaBreaker from './img/hiragana-breaker.png';
+import FEMobile from './img/4e-mobile.png';
 
 export default function App() {
 
@@ -44,6 +46,21 @@ export default function App() {
       {/* MOBILE GAMES */}
       <View style={styles.mobileGamesStyle}>
         <Text style={styles.sectionTitle}>Mobile Games</Text>
+        <View
+          // style={styles.mobileGamesStyle} 
+          style={styles.contentContainer}
+        >
+          <Image
+            source={FEMobile}
+            style={styles.mobileGameImage}
+            alt="Hiragana Breaker logo"
+          />
+          <Image
+            source={HiraganaBreaker}
+            style={styles.mobileGameImage}
+            alt="Hiragana Breaker logo"
+          />
+        </View>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -108,5 +125,20 @@ const styles = StyleSheet.create({
     fontFamily: 'Concert-One',
     fontSize: RFPercentage(3),
     color: '#008080'
+  },
+  contentContainer: {
+    
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    textAlign: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  mobileGameImage: {
+    width: '365px',
+    height: '250px',
+    margin: 10,
+    // resizeMode: 'scale'
   }
 });
