@@ -42,8 +42,8 @@ export default function App() {
         <Text style={styles.subtitleText}>The development portfolio of John Gale</Text>
       </View>
       {/* MOBILE GAMES */}
-      <View>
-
+      <View style={styles.mobileGamesStyle}>
+        <Text style={styles.sectionTitle}>Mobile Games</Text>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    backgroundColor: 'teal',
+    backgroundColor: '#008080',
     width: '100%',
     // height: '25%',
     padding: 20
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     alignItems: 'center',
-    backgroundColor: 'teal',
+    backgroundColor: '#008080',
     width: '100%',
     padding: 1,
     paddingBottom: 19
@@ -97,9 +97,16 @@ const styles = StyleSheet.create({
     fontFamily: 'Retro-Chips',
   },
   mobileGamesStyle: {
-
+    backgroundColor: '#E4FFFF',
+    width: '100%',
+    padding: 20,
+    justifyContent: 'center',
+    textAlign: 'center',
+    alignItems: 'center',
   },
-  mobileGamesText: {
-    
+  sectionTitle: {
+    fontFamily: 'Concert-One',
+    fontSize: RFPercentage(3),
+    color: '#008080'
   }
 });
