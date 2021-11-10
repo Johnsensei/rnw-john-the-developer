@@ -5,7 +5,7 @@ import { RFPercentage } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
-import JohnsenseiAnimated from './img/johnsensei-animated.gif'
+import JohnsenseiAnimated from './img/johnsensei-animated.gif';
 
 export default function App() {
 
@@ -24,7 +24,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.headerStyle}>
-        <Text style={styles.headerText}>John the Developer</Text>
+        <Text style={styles.headerText}>John </Text>
+        <Text style={styles.headerText}>the </Text>
+        <Text style={styles.headerText}>Developer </Text>
         <Image
           source={JohnsenseiAnimated}
           style={styles.johnsenseiAnimated}
@@ -46,10 +48,9 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: '#fff',
-    margin: 40,
-    //TODO Align top.
     fontSize: RFPercentage(4),
-    fontFamily: 'Retro-Italics'
+    fontFamily: 'Retro-Italics',
+    
   },
   johnsenseiAnimated: {
     width: '48px',
@@ -57,7 +58,10 @@ const styles = StyleSheet.create({
   },
   headerStyle: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 40,
+    
   }
 });
