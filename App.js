@@ -12,6 +12,7 @@ import AppleStore from './img/apple-store.png';
 import GooglePlayStore from './img/google-play-store.png';
 import PandemicMe from './img/pandemic-me.png';
 import KaijuKountdown from './img/kaiju-kountdown.png';
+import NucampBootstrap from './img/nucamp-bootstrap.png';
 
 export default function App() {
 
@@ -45,7 +46,8 @@ export default function App() {
       </View>
       {/* HEADER SUBTITLE */}
       <View style={styles.subtitleStyle}>
-        <Text style={styles.subtitleText}>The development portfolio of John Gale</Text>
+        <Text style={styles.subtitleText}>The development portfolio of </Text>
+        <Text style={styles.subtitleText}>John Gale</Text>
       </View>
       {/* MOBILE GAMES */}
       <View style={styles.mobileGamesStyle}>
@@ -61,6 +63,7 @@ export default function App() {
               alt="Fourth Energy logo"
             />
             <View style={styles.appStores}>
+              {/* TODO: Update app store logos for FE to say iPads and tablets only */}
               {/* Apple App Store */}
               <TouchableOpacity
                 onPress={() => Linking.openURL('https://apps.apple.com/us/app/fourth-energy/id1590704459')}
@@ -119,6 +122,7 @@ export default function App() {
         </View>
       </View>
       {/* WEB GAMES */}
+      {/* TODO: Make into a carousel with all featured games. */}
       <View style={[styles.mobileGamesStyle, {backgroundColor: '#C6FFFF'}]}>
         <Text style={[styles.sectionTitle]}>Web Games</Text>
         <View
@@ -158,6 +162,27 @@ export default function App() {
               />
             </TouchableOpacity>
           </View>
+        </View>
+      </View>
+      {/* BOOTCAMP PROJECTS */}
+      <View style={[styles.mobileGamesStyle, {backgroundColor: '#A9FFFF'}]}>
+        <Text style={[styles.sectionTitle]}>Bootcamp Projects</Text>
+        <View
+          // style={styles.mobileGamesStyle}
+          style={styles.contentContainer}
+        >
+          <View>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://johnsensei.itch.io/fourth-energy')}
+            >
+              <Image
+                source={NucampBootstrap}
+                style={[styles.mobileGameImage, {height: 202}]}
+                alt="Nucamp Bootstrap Project"
+              />
+            </TouchableOpacity>
+          </View>
+          
         </View>
       </View>
     </View>

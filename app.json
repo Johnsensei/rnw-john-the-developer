@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "rnw-john-the-developer",
-    "slug": "rnw-john-the-developer",
+    "name": "John the Developer",
+    "slug": "John the Developer",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "rnw-john-the-developer"
+  "name": "John the Developer"
 }
