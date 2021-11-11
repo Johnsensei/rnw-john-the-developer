@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from 'react-native';
 import { RFPercentage } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
@@ -10,6 +10,7 @@ import HiraganaBreaker from './img/hiragana-breaker.png';
 import FEMobile from './img/4e-mobile.png';
 import AppleStore from './img/apple-store.png';
 import GooglePlayStore from './img/google-play-store.png';
+import { color } from 'react-native-reanimated';
 
 export default function App() {
 
@@ -47,9 +48,9 @@ export default function App() {
       </View>
       {/* MOBILE GAMES */}
       <View style={styles.mobileGamesStyle}>
-        <Text style={styles.sectionTitle}>Mobile Games</Text>
+        <Text style={[styles.sectionTitle]}>Mobile Games</Text>
         <View
-          // style={styles.mobileGamesStyle} 
+          // style={styles.mobileGamesStyle}
           style={styles.contentContainer}
         >
           <View>
@@ -59,18 +60,28 @@ export default function App() {
               alt="Hiragana Breaker logo"
             />
             <View style={styles.appStores}>
-              <Image
-                source={AppleStore}
-                style={styles.appStoreIcon}
-                // style={styles.mobileGameImage}
-                alt="Apple App Store logo"
-              />
-              <Image
-                source={GooglePlayStore}
-                style={styles.appStoreIcon}
-                // style={styles.mobileGameImage}
-                alt="Google Play Store logo"
-              />
+              {/* Apple App Store */}
+              <TouchableOpacity
+                onPress={() => Linking.openURL('https://apps.apple.com/us/app/fourth-energy/id1590704459')}
+              >
+                <Image
+                  source={AppleStore}
+                  style={styles.appStoreIcon}
+                  // style={styles.mobileGameImage}
+                  alt="Apple App Store logo"
+                />
+              </TouchableOpacity>
+              {/* Google Play Store */}
+              <TouchableOpacity
+                onPress={() => Linking.openURL('https://play.google.com/store/apps/details?id=com.johnsensei.fourthenergy')}
+              >
+                <Image
+                  source={GooglePlayStore}
+                  style={styles.appStoreIcon}
+                  // style={styles.mobileGameImage}
+                  alt="Google Play Store logo"
+                />
+              </TouchableOpacity>
             </View>
           </View>
           <View>
@@ -80,18 +91,28 @@ export default function App() {
               alt="Hiragana Breaker logo"
             />
             <View style={styles.appStores}>
-              <Image
-                source={AppleStore}
-                style={styles.appStoreIcon}
-                // style={styles.mobileGameImage}
-                alt="Apple App Store logo"
-              />
-              <Image
-                source={GooglePlayStore}
-                style={styles.appStoreIcon}
-                // style={styles.mobileGameImage}
-                alt="Google Play Store logo"
-              />
+              {/* Apple App Store */}
+              <TouchableOpacity
+                onPress={() => Linking.openURL('https://apps.apple.com/us/app/hiragana-breaker/id1207140118?ls=1')}
+              >
+                <Image
+                  source={AppleStore}
+                  style={styles.appStoreIcon}
+                  // style={styles.mobileGameImage}
+                  alt="Apple App Store logo"
+                />
+              </TouchableOpacity>
+              {/* Google Play Store */}
+              <TouchableOpacity
+                onPress={() => Linking.openURL('https://play.google.com/store/apps/details?id=com.johnsenseigames.hiraganabreakerFREE')}
+              >
+                <Image
+                  source={GooglePlayStore}
+                  style={styles.appStoreIcon}
+                  // style={styles.mobileGameImage}
+                  alt="Google Play Store logo"
+                />
+              </TouchableOpacity>
             </View>
           </View>
         </View>
