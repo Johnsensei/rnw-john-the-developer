@@ -212,17 +212,15 @@ export default function App() {
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp React Native Project</Text>
             <TouchableOpacity
-            // TODO: Get RN Project running on Snack.
-              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
               style={{alignSelf: 'center'}}
             >
               <Image
                 source={NucampReactNative}
-                style={[styles.mobileGameImage, {borderWidth: 0, width: 221, height: 202}]}
+                style={[styles.mobileGameImage, {borderWidth: 0, width: 257, height: 235}]}
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
-            <Text style={styles.descriptionText}>Hosted as an Expo Snack</Text>
             <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
             >GitHub repo</Text>
