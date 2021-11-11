@@ -15,6 +15,7 @@ import PandemicMe from './img/pandemic-me.png';
 import KaijuKountdown from './img/kaiju-kountdown.png';
 import NucampBootstrap from './img/nucamp-bootstrap.png';
 import NucampReactNative from './img/nucamp-react-native.png';
+import NucampBackend from './img/nucamp-backend.png';
 
 export default function App() {
 
@@ -177,11 +178,11 @@ export default function App() {
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp Bootstrap Project</Text>
             <TouchableOpacity
-              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+              onPress={() => Linking.openURL('https://nucamp-bootstrap-project.s3.us-east-2.amazonaws.com/jlr-prototype/index.html')}
             >
               <Image
                 source={NucampBootstrap}
-                style={[styles.mobileGameImage, {height: 202, paddingTop: 10}]}
+                style={[styles.mobileGameImage, {height: 202}]}
                 alt="Nucamp Bootstrap Project"
               />
             </TouchableOpacity>
@@ -198,7 +199,7 @@ export default function App() {
             >
               <Image
                 source={NucampBootstrap}
-                style={[styles.mobileGameImage, {height: 202, paddingTop: 10}]}
+                style={[styles.mobileGameImage, {height: 202}]}
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
@@ -213,10 +214,11 @@ export default function App() {
             <TouchableOpacity
             // TODO: Get RN Project running on Snack.
               onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+              style={{alignSelf: 'center'}}
             >
               <Image
                 source={NucampReactNative}
-                style={[styles.mobileGameImage, {borderWidth: 0, width: 357, height: 327, paddingTop: 10}]}
+                style={[styles.mobileGameImage, {borderWidth: 0, width: 221, height: 202}]}
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
@@ -225,7 +227,22 @@ export default function App() {
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
             >GitHub repo</Text>
           </View>
-
+          {/* BACKEND PROJECT */}
+          <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>NuCamp Backend Project</Text>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlrServer')}
+            >
+              <Image
+                source={NucampBackend}
+                style={[styles.mobileGameImage, {height: 202}]}
+                alt="Nucamp React Project"
+              />
+            </TouchableOpacity>
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlrServer')}
+            >GitHub repo</Text>
+          </View>
 
         </View>
       </View>
