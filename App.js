@@ -8,6 +8,8 @@ import * as Font from 'expo-font';
 import JohnsenseiAnimated from './img/johnsensei-animated.gif';
 import HiraganaBreaker from './img/hiragana-breaker.png';
 import FEMobile from './img/4e-mobile.png';
+import AppleStore from './img/apple-store.png';
+import GooglePlayStore from './img/google-play-store.png';
 
 export default function App() {
 
@@ -50,16 +52,48 @@ export default function App() {
           // style={styles.mobileGamesStyle} 
           style={styles.contentContainer}
         >
-          <Image
-            source={FEMobile}
-            style={styles.mobileGameImage}
-            alt="Hiragana Breaker logo"
-          />
-          <Image
-            source={HiraganaBreaker}
-            style={styles.mobileGameImage}
-            alt="Hiragana Breaker logo"
-          />
+          <View>
+            <Image
+              source={FEMobile}
+              style={styles.mobileGameImage}
+              alt="Hiragana Breaker logo"
+            />
+            <View style={styles.appStores}>
+              <Image
+                source={AppleStore}
+                style={styles.appStoreIcon}
+                // style={styles.mobileGameImage}
+                alt="Apple App Store logo"
+              />
+              <Image
+                source={GooglePlayStore}
+                style={styles.appStoreIcon}
+                // style={styles.mobileGameImage}
+                alt="Google Play Store logo"
+              />
+            </View>
+          </View>
+          <View>
+            <Image
+              source={HiraganaBreaker}
+              style={styles.mobileGameImage}
+              alt="Hiragana Breaker logo"
+            />
+            <View style={styles.appStores}>
+              <Image
+                source={AppleStore}
+                style={styles.appStoreIcon}
+                // style={styles.mobileGameImage}
+                alt="Apple App Store logo"
+              />
+              <Image
+                source={GooglePlayStore}
+                style={styles.appStoreIcon}
+                // style={styles.mobileGameImage}
+                alt="Google Play Store logo"
+              />
+            </View>
+          </View>
         </View>
       </View>
       <StatusBar style="auto" />
@@ -130,15 +164,31 @@ const styles = StyleSheet.create({
     
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     textAlign: 'center',
     alignItems: 'center',
+    // alignContent: 'space-around',
     width: '100%',
   },
   mobileGameImage: {
     width: '365px',
     height: '250px',
-    margin: 10,
+    marginTop: 10,
+    borderColor: '#000',
+    borderWidth: 1
     // resizeMode: 'scale'
+  },
+  appStores: {
+    flexDirection: 'row',
+    // flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    // textAlign: 'center',
+    alignItems: 'center',
+  },
+  appStoreIcon: {
+    width: '160px',
+    height: '47px',
+    margin: 10,
+    
   }
 });
