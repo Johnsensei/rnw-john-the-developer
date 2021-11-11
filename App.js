@@ -182,7 +182,7 @@ export default function App() {
             >
               <Image
                 source={NucampBootstrap}
-                style={[styles.mobileGameImage, {height: 202}]}
+                style={[styles.mobileGameImage, {width: 323, height: 202}]}
                 alt="Nucamp Bootstrap Project"
               />
             </TouchableOpacity>
