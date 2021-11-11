@@ -10,7 +10,8 @@ import HiraganaBreaker from './img/hiragana-breaker.png';
 import FEMobile from './img/4e-mobile.png';
 import AppleStore from './img/apple-store.png';
 import GooglePlayStore from './img/google-play-store.png';
-import { color } from 'react-native-reanimated';
+import PandemicMe from './img/pandemic-me.png';
+import KaijuKountdown from './img/kaiju-kountdown.png';
 
 export default function App() {
 
@@ -57,7 +58,7 @@ export default function App() {
             <Image
               source={FEMobile}
               style={styles.mobileGameImage}
-              alt="Hiragana Breaker logo"
+              alt="Fourth Energy logo"
             />
             <View style={styles.appStores}>
               {/* Apple App Store */}
@@ -117,7 +118,48 @@ export default function App() {
           </View>
         </View>
       </View>
-      <StatusBar style="auto" />
+      {/* WEB GAMES */}
+      <View style={[styles.mobileGamesStyle, {backgroundColor: '#C6FFFF'}]}>
+        <Text style={[styles.sectionTitle]}>Web Games</Text>
+        <View
+          // style={styles.mobileGamesStyle}
+          style={styles.contentContainer}
+        >
+          <View>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://johnsensei.itch.io/fourth-energy')}
+            >
+              <Image
+                source={FEMobile}
+                style={styles.mobileGameImage}
+                alt="Fourth Energy logo"
+              />
+            </TouchableOpacity>
+          </View>
+          <View>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://johnsensei.itch.io/pandemic-me')}
+            >
+              <Image
+                source={PandemicMe}
+                style={styles.mobileGameImage}
+                alt="Pandemic Me logo"
+              />
+            </TouchableOpacity>
+          </View>
+          <View>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://johnsensei.itch.io/kaiju-kountdown')}
+            >
+              <Image
+                source={KaijuKountdown}
+                style={styles.mobileGameImage}
+                alt="Kaiju Kountdown logo"
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
