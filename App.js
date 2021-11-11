@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from 'react-native';
+import { Icon } from 'react-native-elements';
 import { RFPercentage } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
@@ -13,6 +14,7 @@ import GooglePlayStore from './img/google-play-store.png';
 import PandemicMe from './img/pandemic-me.png';
 import KaijuKountdown from './img/kaiju-kountdown.png';
 import NucampBootstrap from './img/nucamp-bootstrap.png';
+import NucampReactNative from './img/nucamp-react-native.png';
 
 export default function App() {
 
@@ -171,18 +173,60 @@ export default function App() {
           // style={styles.mobileGamesStyle}
           style={styles.contentContainer}
         >
-          <View>
+          {/* BOOTSTRAP PROJECT */}
+          <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>NuCamp Bootstrap Project</Text>
             <TouchableOpacity
-              onPress={() => Linking.openURL('https://johnsensei.itch.io/fourth-energy')}
+              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
             >
               <Image
                 source={NucampBootstrap}
-                style={[styles.mobileGameImage, {height: 202}]}
+                style={[styles.mobileGameImage, {height: 202, paddingTop: 10}]}
                 alt="Nucamp Bootstrap Project"
               />
             </TouchableOpacity>
+            <Text style={styles.descriptionText}>Hosted on AWS S3</Text>
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-prototype')}
+            >GitHub repo</Text>
           </View>
-          
+          {/* REACT PROJECT */}
+          <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>NuCamp React Project</Text>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+            >
+              <Image
+                source={NucampBootstrap}
+                style={[styles.mobileGameImage, {height: 202, paddingTop: 10}]}
+                alt="Nucamp React Project"
+              />
+            </TouchableOpacity>
+            <Text style={styles.descriptionText}>Hosted on AWS Amplify</Text>
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-react')}
+            >GitHub repo</Text>
+          </View>
+          {/* REACT NATIVE PROJECT */}
+          <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>NuCamp React Native Project</Text>
+            <TouchableOpacity
+            // TODO: Get RN Project running on Snack.
+              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+            >
+              <Image
+                source={NucampReactNative}
+                style={[styles.mobileGameImage, {borderWidth: 0, width: 357, height: 327, paddingTop: 10}]}
+                alt="Nucamp React Project"
+              />
+            </TouchableOpacity>
+            <Text style={styles.descriptionText}>Hosted as an Expo Snack</Text>
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
+            >GitHub repo</Text>
+          </View>
+
+
         </View>
       </View>
     </View>
@@ -249,7 +293,6 @@ const styles = StyleSheet.create({
     color: '#008080'
   },
   contentContainer: {
-    
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
@@ -277,6 +320,10 @@ const styles = StyleSheet.create({
     width: '160px',
     height: '47px',
     margin: 10,
-    
+  },
+  descriptionText: {
+    fontFamily: 'Concert-One',
+    fontSize: RFPercentage(2),
+    color: '#008080'
   }
 });
