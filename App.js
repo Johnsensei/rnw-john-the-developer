@@ -271,6 +271,12 @@ export default function App() {
             onPress={() => Linking.openURL('https://twitter.com/MrJohnSensei')}
           />
         </View>
+        <Text style={{color: '#000', fontSize: RFPercentage(1.5)}}>This site was coded with React Native Web and hosted on AWS Amplify. </Text>
+        <View style={[styles.contentContainer, {margin: 10}]}>
+          <Text style={{color: '#000', fontSize: RFPercentage(1.5), textDecorationLine: 'underline', alignSelf: 'center'}}
+            onPress={() => Linking.openURL('https://github.com/Johnsensei/rnw-john-the-developer')}
+          >GitHub repo</Text>
+        </View>
       </View>
 
     </View>
