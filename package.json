@@ -7,6 +7,9 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "babel-loader": "^8.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "expo": "~43.0.2",
     "expo-app-loading": "~1.2.1",
     "expo-font": "~10.0.3",
@@ -22,7 +25,9 @@
     "react-native-responsive-fontsize": "^0.5.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.8.0",
-    "react-native-web": "^0.17.1"
+    "react-native-web": "^0.17.1",
+    "webpack": "^5.64.0",
+    "webpack-dev-server": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
