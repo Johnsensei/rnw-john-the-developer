@@ -14,6 +14,7 @@ import GooglePlayStore from './img/google-play-store.png';
 import PandemicMe from './img/pandemic-me.png';
 import KaijuKountdown from './img/kaiju-kountdown.png';
 import NucampBootstrap from './img/nucamp-bootstrap.png';
+import NucampReact from './img/nucamp-react.png';
 import NucampReactNative from './img/nucamp-react-native.png';
 import NucampBackend from './img/nucamp-backend.png';
 
@@ -195,11 +196,11 @@ export default function App() {
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp React Project</Text>
             <TouchableOpacity
-              onPress={() => Linking.openURL('https://drive.google.com/file/d/1a1Gf1dMgUL_-dTiuMEE6D8Hoi8-bsby9/view?usp=sharing')}
+              onPress={() => Linking.openURL('https://master.d27sy7609npbeb.amplifyapp.com/home')}
             >
               <Image
-                source={NucampBootstrap}
-                style={[styles.mobileGameImage, {height: 202}]}
+                source={NucampReact}
+                style={[styles.mobileGameImage, {width: 319, height: 202}]}
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
