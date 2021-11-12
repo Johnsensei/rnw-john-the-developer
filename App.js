@@ -37,8 +37,8 @@ export default function App() {
       {/* HEADER */}
       <View style={styles.headerStyle}>
         <Text style={styles.headerText}>John </Text>
-        <Text style={styles.headerText}>the </Text>
-        <Text style={styles.headerText}>Developer </Text>
+        <Text style={styles.headerText}>Gale </Text>
+        {/* <Text style={styles.headerText}>Developer </Text> */}
         <Image
           source={JohnsenseiAnimated}
           style={styles.johnsenseiAnimated}
@@ -46,8 +46,8 @@ export default function App() {
       </View>
       {/* HEADER SUBTITLE */}
       <View style={styles.subtitleStyle}>
-        <Text style={styles.subtitleText}>The development portfolio of </Text>
-        <Text style={styles.subtitleText}>John Gale</Text>
+        <Text style={styles.subtitleText}>Development Portfolio</Text>
+        {/* <Text style={styles.subtitleText}>John Gale</Text> */}
       </View>
       {/* MOBILE GAMES */}
       <View style={styles.mobileGamesStyle}>
