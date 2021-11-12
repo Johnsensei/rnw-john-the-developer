@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, Button, TextInput, Form } from 'react-native';
+import { SocialIcon } from 'react-native-elements';
 import { RFPercentage } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
@@ -188,7 +188,7 @@ export default function App() {
               />
             </TouchableOpacity>
             <Text style={styles.descriptionText}>Hosted on AWS S3</Text>
-            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-prototype')}
             >GitHub repo</Text>
           </View>
@@ -205,7 +205,7 @@ export default function App() {
               />
             </TouchableOpacity>
             <Text style={styles.descriptionText}>Hosted on AWS Amplify</Text>
-            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-react')}
             >GitHub repo</Text>
           </View>
@@ -222,7 +222,7 @@ export default function App() {
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
-            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
             >GitHub repo</Text>
           </View>
@@ -238,13 +238,41 @@ export default function App() {
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
-            <Text style={[styles.descriptionText, {textDecorationLine: 'underline'}]}
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlrServer')}
             >GitHub repo</Text>
           </View>
-
         </View>
       </View>
+      {/* CONTACT FORM */}
+      {/* TODO: Make Contact form and string it up with AWS to send email. */}
+      {/* <View style={[styles.mobileGamesStyle, {backgroundColor: '#8CEEED'}]}>
+        <Text style={[styles.sectionTitle]}>Contact</Text>
+        <View>
+
+        </View>
+
+      </View> */}
+
+      {/* FOOTER */}
+      <View style={styles.headerStyle}>
+        <Text style={{color: '#fff', fontSize: RFPercentage(1.5)}}>Connect - Contact</Text>
+        <View style={[styles.contentContainer, {justifyContent: 'center', padding: 10}]}>
+        <SocialIcon
+            type='github'
+            onPress={() => Linking.openURL('https://github.com/Johnsensei')}
+          />
+          <SocialIcon
+            type='linkedin'
+            onPress={() => Linking.openURL('https://www.linkedin.com/in/johnagale/')}
+          />
+          <SocialIcon
+            type='twitter'
+            onPress={() => Linking.openURL('https://twitter.com/MrJohnSensei')}
+          />
+        </View>
+      </View>
+
     </View>
   );
 }
@@ -341,5 +369,19 @@ const styles = StyleSheet.create({
     fontFamily: 'Concert-One',
     fontSize: RFPercentage(2),
     color: '#008080'
-  }
+  },
+  formRow: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    margin: 10
+},
+  formLabel: {
+    fontSize: 18,
+    flex: 2
+},
+  formItem: {
+    flex: 1
+},
 });
