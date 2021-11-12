@@ -1,9 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, Button, TextInput, Form } from 'react-native';
 import { SocialIcon } from 'react-native-elements';
 import { RFPercentage } from "react-native-responsive-fontsize";
-import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import JohnsenseiAnimated from './img/johnsensei-animated.gif';
@@ -28,8 +26,6 @@ export default function App() {
         // Load a font `Montserrat` from a static resource
         'Retro-Italics': require('./fonts/retroitalics.ttf'),
         'Retro-Chips': require('./fonts/Retrochips.otf'),
-        'Cotton-Butter': require('./fonts/CottonButter.ttf'),
-        'Johnie-Horian': require('./fonts/JohnieHorian.ttf'),
         'Concert-One': require('./fonts/ConcertOne.ttf'),
       });
       setFontsLoaded(true);
@@ -271,7 +267,7 @@ export default function App() {
             onPress={() => Linking.openURL('https://twitter.com/MrJohnSensei')}
           />
         </View>
-        <Text style={{color: '#000', fontSize: RFPercentage(1.5)}}>This site was coded with React Native Web and hosted on AWS Amplify. </Text>
+        <Text style={{color: '#000', fontSize: RFPercentage(1.5)}}>This site was coded with React Native Web and is hosted on AWS Amplify. </Text>
         <View style={[styles.contentContainer, {margin: 10}]}>
           <Text style={{color: '#000', fontSize: RFPercentage(1.5), textDecorationLine: 'underline', alignSelf: 'center'}}
             onPress={() => Linking.openURL('https://github.com/Johnsensei/rnw-john-the-developer')}
