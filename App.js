@@ -15,6 +15,7 @@ import NucampBootstrap from './img/nucamp-bootstrap.png';
 import NucampReact from './img/nucamp-react.png';
 import NucampReactNative from './img/nucamp-react-native.png';
 import NucampBackend from './img/nucamp-backend.png';
+import { min } from 'react-native-reanimated';
 
 export default function App() {
 
@@ -172,7 +173,7 @@ export default function App() {
           style={styles.contentContainer}
         >
           {/* BOOTSTRAP PROJECT */}
-          <View style={{marginTop: 40}}>
+          <View style={{marginTop: 40, marginRight: min(10)}}>
             <Text style={styles.descriptionText}>NuCamp Bootstrap Project</Text>
             <TouchableOpacity
               onPress={() => Linking.openURL('https://nucamp-bootstrap-project.s3.us-east-2.amazonaws.com/jlr-prototype/index.html')}
