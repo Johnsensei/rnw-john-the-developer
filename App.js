@@ -6,7 +6,7 @@ import * as Font from 'expo-font';
 
 import JohnsenseiAnimated from './img/johnsensei-animated.gif';
 import HiraganaBreaker from './img/hiragana-breaker.png';
-import FEMobile from './img/4e-mobile.png';
+import FEMobile from './img/4E-mobile.png';
 import AppleStore from './img/apple-store.png';
 import GooglePlayStore from './img/google-play-store.png';
 import PandemicMe from './img/pandemic-me.png';
