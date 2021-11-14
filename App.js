@@ -289,7 +289,6 @@ const styles = StyleSheet.create({
     justifyContent: 'top',
   },
   headerStyle: {
-    // flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
@@ -297,7 +296,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     backgroundColor: '#008080',
     width: '100%',
-    // height: '25%',
     padding: 20
   },
   headerText: {
@@ -345,7 +343,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     textAlign: 'center',
     alignItems: 'center',
-    // alignContent: 'space-around',
     width: '100%',
   },
   mobileGameImage: {
@@ -354,13 +351,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderColor: '#000',
     borderWidth: 1
-    // resizeMode: 'scale'
   },
   appStores: {
     flexDirection: 'row',
-    // flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    // textAlign: 'center',
     alignItems: 'center',
   },
   appStoreIcon: {
@@ -388,3 +382,7 @@ const styles = StyleSheet.create({
     flex: 1
 },
 });
+
+// Other TODOS:
+// Move each section into its own separate component.
+// Get a preview with image and description working for social media sites.
