@@ -15,6 +15,7 @@ import NucampBootstrap from './img/nucamp-bootstrap.png';
 import NucampReact from './img/nucamp-react.png';
 import NucampReactNative from './img/nucamp-react-native.png';
 import NucampBackend from './img/nucamp-backend.png';
+import Drawsultation from './img/drawsultation.png';
 import { min } from 'react-native-reanimated';
 
 export default function App() {
@@ -167,7 +168,7 @@ export default function App() {
       </View>
       {/* BOOTCAMP PROJECTS */}
       <View style={[styles.mobileGamesStyle, {backgroundColor: '#A9FFFF'}]}>
-        <Text style={[styles.sectionTitle]}>Bootcamp Projects</Text>
+        <Text style={[styles.sectionTitle]}>Bootcamp and Hackathon Projects</Text>
         <View
           // style={styles.mobileGamesStyle}
           style={styles.contentContainer}
@@ -201,7 +202,7 @@ export default function App() {
                 alt="Nucamp React Project"
               />
             </TouchableOpacity>
-            <Text style={styles.descriptionText}>Hosted on AWS Amplify</Text>
+            <Text style={styles.descriptionText}>Deployed via AWS Amplify</Text>
             <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-react')}
             >GitHub repo</Text>
@@ -239,6 +240,25 @@ export default function App() {
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlrServer')}
             >GitHub repo</Text>
           </View>
+
+          {/* MINTBEAN FALL 2021 PROJECT */}
+          <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>Mintbean Hackathon Project</Text>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://www.drawsultation.com/')}
+            >
+              <Image
+                source={Drawsultation}
+                style={[styles.mobileGameImage, {height: 202}]}
+                alt="Mintbean Fall 2021 Hiring Hackathon Project"
+              />
+            </TouchableOpacity>
+            {/* <Text style={styles.descriptionText}>Fall 2021</Text> */}
+            <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/oekaki')}
+            >GitHub repo</Text>
+          </View>
+
         </View>
       </View>
       {/* CONTACT FORM */}
@@ -386,3 +406,4 @@ const styles = StyleSheet.create({
 // Other TODOS:
 // Move each section into its own separate component.
 // Get a preview with image and description working for social media sites.
+// Get NuCamp React Native Demo running on Snack. Reference article about webpack.config.js
