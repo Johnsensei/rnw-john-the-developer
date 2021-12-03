@@ -123,10 +123,11 @@ export default function App() {
           </View>
         </View>
       </View>
+
       {/* WEB GAMES */}
       {/* TODO: Make into a carousel with all featured games. */}
       <View style={[styles.mobileGamesStyle, {backgroundColor: '#C6FFFF'}]}>
-        <Text style={[styles.sectionTitle]}>Web Games</Text>
+        <Text style={[styles.sectionTitle]}>Featured Web Games</Text>
         <View
           // style={styles.mobileGamesStyle}
           style={styles.contentContainer}
@@ -173,23 +174,24 @@ export default function App() {
           // style={styles.mobileGamesStyle}
           style={styles.contentContainer}
         >
-          {/* BOOTSTRAP PROJECT */}
-          <View style={{marginTop: 40, marginRight: min(10)}}>
-            <Text style={styles.descriptionText}>NuCamp Bootstrap Project</Text>
+           {/* MINTBEAN FALL 2021 PROJECT */}
+           <View style={{marginTop: 40}}>
+            <Text style={styles.descriptionText}>Mintbean Hackathon Project</Text>
             <TouchableOpacity
-              onPress={() => Linking.openURL('https://nucamp-bootstrap-project.s3.us-east-2.amazonaws.com/jlr-prototype/index.html')}
+              onPress={() => Linking.openURL('https://www.drawsultation.com/')}
             >
               <Image
-                source={NucampBootstrap}
-                style={[styles.mobileGameImage, {width: 323, height: 202}]}
-                alt="Nucamp Bootstrap Project"
+                source={Drawsultation}
+                style={[styles.mobileGameImage, {height: 202}]}
+                alt="Mintbean Fall 2021 Hiring Hackathon Project"
               />
             </TouchableOpacity>
-            <Text style={styles.descriptionText}>Hosted on AWS S3</Text>
+            <Text style={styles.descriptionText}>AWS Amplify and Route 53</Text>
             <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
-              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-prototype')}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/oekaki')}
             >GitHub repo</Text>
           </View>
+          
           {/* REACT PROJECT */}
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp React Project</Text>
@@ -207,6 +209,7 @@ export default function App() {
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-react')}
             >GitHub repo</Text>
           </View>
+
           {/* REACT NATIVE PROJECT */}
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp React Native Project</Text>
@@ -224,6 +227,7 @@ export default function App() {
               onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-reactnative')}
             >GitHub repo</Text>
           </View>
+
           {/* BACKEND PROJECT */}
           <View style={{marginTop: 40}}>
             <Text style={styles.descriptionText}>NuCamp Backend Project</Text>
@@ -241,21 +245,21 @@ export default function App() {
             >GitHub repo</Text>
           </View>
 
-          {/* MINTBEAN FALL 2021 PROJECT */}
-          <View style={{marginTop: 40}}>
-            <Text style={styles.descriptionText}>Mintbean Hackathon Project</Text>
+         {/* BOOTSTRAP PROJECT */}
+          <View style={{marginTop: 40, marginRight: min(10)}}>
+            <Text style={styles.descriptionText}>NuCamp Bootstrap Project</Text>
             <TouchableOpacity
-              onPress={() => Linking.openURL('https://www.drawsultation.com/')}
+              onPress={() => Linking.openURL('https://nucamp-bootstrap-project.s3.us-east-2.amazonaws.com/jlr-prototype/index.html')}
             >
               <Image
-                source={Drawsultation}
-                style={[styles.mobileGameImage, {height: 202}]}
-                alt="Mintbean Fall 2021 Hiring Hackathon Project"
+                source={NucampBootstrap}
+                style={[styles.mobileGameImage, {width: 323, height: 202}]}
+                alt="Nucamp Bootstrap Project"
               />
             </TouchableOpacity>
-            {/* <Text style={styles.descriptionText}>Fall 2021</Text> */}
+            <Text style={styles.descriptionText}>Hosted on AWS S3</Text>
             <Text style={[styles.descriptionText, {textDecorationLine: 'underline', alignSelf: 'center'}]}
-              onPress={() => Linking.openURL('https://github.com/Johnsensei/oekaki')}
+              onPress={() => Linking.openURL('https://github.com/Johnsensei/jlr-prototype')}
             >GitHub repo</Text>
           </View>
 
@@ -288,7 +292,7 @@ export default function App() {
             onPress={() => Linking.openURL('https://twitter.com/MrJohnSensei')}
           />
         </View>
-        <Text style={{color: '#000', fontSize: RFPercentage(1.5)}}>This site was coded with React Native Web and is hosted on AWS Amplify. </Text>
+        <Text style={{color: '#000', fontSize: RFPercentage(1.5)}}>This site was coded with React Native Web and deployed with AWS Amplify. </Text>
         <View style={[styles.contentContainer, {margin: 10}]}>
           <Text style={{color: '#000', fontSize: RFPercentage(1.5), textDecorationLine: 'underline', alignSelf: 'center'}}
             onPress={() => Linking.openURL('https://github.com/Johnsensei/rnw-john-the-developer')}
